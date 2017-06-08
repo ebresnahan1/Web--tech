@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CS13-InClass</title>
+
+        <style type="text/css">
+            /* Your styles go here */
+            body {
+                text-align: center;
+            }
+        </style>
+        <script type="text/javascript">
+            function enlargeMe(id) {
+                var i = document.getElementById(id);
+                var w = i.width; 
+                var newWidth = parseInt(w);
+                i.width = newWidth * 1.5;
+            }
+            function ensmallMe(id) {
+                var i = document.getElementById(id);
+                var w= i.width; 
+                var newWidth = parseInt(w);
+                i.width = newWidth / 1.5;
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <h2> Manipulating Styles and Images </h2>
+
+        <p><img id= "usa" src="images/usa.png" onmouseover= "enlargeMe(this.id)" onmouseout="ensmallMe(this.id)" alt="Image goes here" title="map of USA" width="400"></p>
+        <p><img id= "emily" src="images/emily.jpg" onmouseover="enlargeMe(this.id)" onmouseout="ensmallMe(this.id)" alt="Image goes here" title="emily" width="400"</p>
+        <p><img id= "dog" src="images/dog.jpg" onmouseover="enlargeMe(this.id)" onmouseout="ensmallMe(this.id)" alt="Image goes here" title="dog" width="400"</p>
+        <hr>
+
+    </body>
+
+</html>
