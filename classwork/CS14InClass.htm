@@ -24,24 +24,32 @@
 
 
         <script type="text/javascript">
-            function ask(){
-                
-                var x = promt("What plant do you like?", ""); 
-                if (x.toLowerCase() == "Thyme") {
-                    i.src="images/thyme.jpg"; 
-                }
-                else if (x.toLowerCase() == "Maple")
-                    i.src="images/maple.jpg"; 
+            function changeImage() {
+                var x = prompt("What leaf do you like?", "");
+                var i = document.getElementById("image1");
+                if (x.toLowerCase() == "clover") {
+
+                i.src = "Images/clover.jpg"
+            }
+                else if(x.toLowerCase() == "shamrock"){
+                i.src = "Images/shamrock.jpg"
+            }
+                else if(x.toLowerCase() == "thyme"){
+                i.src = "Images/thyme.jpg"
+            }
+                else if(x.toLowerCase() == "maple"){
+                i.src = "Images/maple.jpg"
             }
 
-        </script>
+        }
+    </script>
+</head>
     </head>
 
     <body>
         <h1> Changing Images Using User inputs - Click on Image below to start</h1>
         <p>
-            <img src="" alt="Click here to see the image of your choice" title="" />
-            <img id="image1" src="">
+            <img id="image1" src="" onclick="changeImage()" alt="Click here to see the image of your choice" title="">
         </p>
     </body>
 
