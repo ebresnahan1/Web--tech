@@ -27,13 +27,14 @@
         </style>
 
         <script type="text/javascript">
-            function clickP1(){
+            /*function clickP1(){
                 var h = document.getElementById("head1");
                 var p1 = document.getElementById("p1");
                 var p2 = document.getElementById("p2");
                 p1.style.backgroundColor = "yellow";  
                 p2.style.backgroundColor = "lime";
                 h.innerHTML = "Go Paragraph 1";
+                p1.style.borderColor = "red"; 
             }
             function clickP2(){
                 var h = document.getElementById("head1");
@@ -42,6 +43,26 @@
                 p1.style.backgroundColor = "yellow";  
                 p2.style.backgroundColor = "lime";
                 h.innerHTML = "Go Paragraph 2";
+                p1.style.borderColor = "red"; 
+            } */
+
+            function change(parID){
+                var h = document.getElementById("head1");
+                var p1 = document.getElementById("p1");
+                var p2 = document.getElementById("p2");
+                if (parID == "p1"){
+                    p1.style.backgroundColor = "yellow";  
+                    p2.style.backgroundColor = "lime";
+                    h.innerHTML = "Go Paragraph 1";
+                    p1.style.borderColor = "red";  
+                }
+                else {
+                    p1.style.backgroundColor = "lime";  
+                    p2.style.backgroundColor = "yellow";
+                    h.innerHTML = "Go Paragraph 2";
+                    p1.style.borderColor = "blue"; 
+                }
+                
             }
         </script>
     </head>
@@ -58,11 +79,11 @@
         <hr>
         <h2>Paint the Paragraph</h2>
         <h3 id="head1">This is the heading that should change</h3>
-        <p class="border" id="p1" onclick="clickP1()">
+        <p class="border" id="p1" onclick="change(this.id)">
             This is paragraph 1
         </p>
         <p></p>
-        <p class="border" id="p2" onclick="clickP2()">
+        <p class="border" id="p2" onclick="change(this.id)">
             This is paragraph 2
         </p>
 
