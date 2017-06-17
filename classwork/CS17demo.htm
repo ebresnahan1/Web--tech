@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>Web Technologies Array Demo- </title>
+
+        <script>
+            function processInput() {
+                var myForm = document.getElementById("form1"); 
+                var userChoice; 
+                /*if (myForm.colors[0].chekced){
+                    userChoice = myForm.colors[0].value; 
+                }
+                else if (myForm.colors[1].checked){
+                    userChoice = myForm.colors[1].value; 
+                }
+                else if (myForm.colors[2].checked){
+                    userChoice = myForm.colors[2].value; 
+                }
+                else{
+                    userChoice = myForm.colors[3].value; 
+                }*/ 
+
+                var i; 
+                for (i = 0; i<myForm.colors.length; i++){
+                    if (myForm.colors[i].checked){
+                        userChoice = myForm.colors[i].value;
+                    }
+                }
+                document.getElementById("choice").innerHTML = userChoice; 
+
+                var x; 
+                var sum = 0; 
+                for (x = 1; x < 11; x++){
+                    sum = sum + x;
+                }
+                
+                return false; 
+            }
+
+        </script>
+
+</head>
+
+<body>
+    <h1>Array Demo</h1>
+
+    <form id="form1" action="" method="post">
+        red: <input type="radio" name="colors" value="red">
+        blue: <input type="radio" name="colors" value="blue">
+        yellow: <input type="radio" name="colors" value="yellow">
+        green: <input type="radio" name="colors" value="green">
+    
+    <button onclick="return processInput()">Click me</button>
+
+    </form>
+    
+    <p>You picked: <span id="choice"></span></p>
+
+
+</body>
+
+</html>
+
