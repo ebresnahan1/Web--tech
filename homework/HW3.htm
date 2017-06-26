@@ -13,6 +13,8 @@
             img {
                 border: 6px solid navy;
                 margin-bottom: 100px;
+                width: 30%; 
+                height: 25%; 
             }
 
             p.cent {
@@ -36,52 +38,56 @@
                 margin-right: 20px;
                 background-color: White;
                 height: 50px;
-                width: 140px
+                width: 140px;  
             }
         </style>
         <script type="text/javascript">
-            var picture; 
+            var lastimage; 
             var buttonClick = false; 
             function animals(id) {
                 document.getElementById("image").src = id+ ".jpg" ; 
 
-                if (id == "germansheperd" ){
+                if (id == "germansheperd"){
                     if(buttonClick)
-                        document.getElementById(picture).style.backgroundColor="white" ; 
+                        document.getElementById(lastimage).style.backgroundColor="white" ; 
                         buttonClicked = true; 
-                        picture = "germansheperd" ; 
-                        document.getElementById("image").style.boderColor= "yellow" ; 
+                        lastimage = "germansheperd" ; 
+                        document.getElementById("image").style.borderColor= "yellow" ; 
+                        document.getElementById("heading").innerHTML = "german sheperd"; 
                         document.getElementById(id).style.backgroundColor = "silver" ; 
                 }   
-                else if (id == "penguin" ){
+                if (id == "penguin" ){
                     if(buttonClick)
-                        document.getElementById(picture).style.backgroundColor="white" ; 
+                        document.getElementById(lastimage).style.backgroundColor="white" ; 
                         buttonClicked = true ; 
-                        picture = "penguin" ; 
-                        document.getElementById("image").style.boderColor= "red" ; 
+                        lastimage = "penguin" ; 
+                        document.getElementById("image").style.borderColor= "red" ; 
+                        document.getElementById("heading").innerHTML = "penguin"
                         document.getElementById(id).style.backgroundColor = "silver" ; 
                 }
                 
-                else if (id == "snowleopord" ){
+                if (id == "snowleopord" ){
                     if(buttonClick)
-                        document.getElementById(picture).style.backgroundColor="white" ; 
+                        document.getElementById(lastimage).style.backgroundColor="white" ; 
                         buttonClicked = true ; 
-                        picture = "snowleopord" ; 
-                        document.getElementById("image").style.boderColor= "green" ; 
+                        lastimage = "snowleopord" ; 
+                        document.getElementById("image").style.borderColor= "green" ;
+                        document.getElementById("heading").innerHTML = "snow leopord" 
                         document.getElementById(id).style.backgroundColor = "silver" ; 
                 }
-                else if (id == "lynx" ){
+                 if (id == "lynx" ){
                     if(buttonClick)
-                        document.getElementById(picture).style.backgroundColor="white" ; 
+                        document.getElementById(lastimage).style.backgroundColor="white" ; 
                         buttonClicked = true ; 
-                        picture = "lynx"; 
-                        document.getElementById("image").style.boderColor= "lime" ; 
+                        lastimage = "lynx"; 
+                        document.getElementById("image").style.borderColor= "lime" ;
+                        document.getElementById("heading").innerHTML = "lynx";  
                         document.getElementById(id).style.backgroundColor = "silver" ; 
                 }
             }
             function enLarge (){
-                document.getElementById("image").style.width= "135%" ; 
-                document.getElementById(image).style.width="120%" ;
+                document.getElementById("image").style.width= "55%" ; 
+                document.getElementById(image).style.width="45%" ;
             }
             function disenLarge (){
                 document.getElementById("image").style.width= "35%" ; 
@@ -96,9 +102,9 @@
 
     <body>
 
-        <h1 id="head"> The Animal Name Goes Here</h1>
+        <h1 id="heading"> The Animal Name Goes Here</h1>
         <p class="cent">
-            <img id="image" src="" alt="image here" title="Animal" onmouseover="enLarge" onmouseout="disenLarge">
+            <img id="image" src="" alt="image here" title="Animal" onmouseover="enLarge()" onmouseout="disenLarge()">
         </p>
         <p class= "cent">
             <button id="germansheperd" onclick="animals('germansheperd')">German Shepherd</button>

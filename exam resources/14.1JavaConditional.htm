@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <title>Web Tech</title>
+
+        <style type="text/css">
+        </style>
+
+        <script type="text/javascript">
+          function change_BackgroundColor(){
+              var colorOne=document.getElementById ("name");
+              colorOne.style.backgroundColor = "grey";
+          }
+          function change_red() {
+              var colorTwo=document.getElementById("red");
+              colorTwo.style.color=("red")
+          }
+          function calculate(){
+              var year = 2017;
+              var question = document.getElementById("x");
+              question.innerHTML = year; 
+
+              var month = "June";
+              document.getElementById("y").innerHTML = month;
+
+              alert("This class is fun!")
+              document.getElementById("z").innerHTML = year % 10;
+          }
+        
+        </script>
+
+
+    </head>
+
+    <body>
+        <h1 id="name" onclick="change_BackgroundColor()">My first title (Click Me!)</h1>
+
+        <h1 id="red" onclick="change_red()" ondblclick="change_BackgroundColor()">Another title</h1>
+
+        <p> x = <span id="x"> ?</span> </p> 
+        <P> y = <span id="y"> ?</span> </p>
+        <p> z = <span id="z"> The last digit of this year is ? </span> </p>
+
+        <button onclick="calculate()">Click Me</button>
+
+    </body>
+
+</html>

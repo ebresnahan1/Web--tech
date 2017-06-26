@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>CS16 - Practice</title>
+        <script>
+            function change(id) {
+                var heading = document.getElementById("h");
+                heading.innerHTML = document.getElementById(id).innerHTML;
+                if (id == "a") {
+                    heading.style.fontFamily = "Lucida Handwriting";
+                    heading.style.color = "navy";
+                }
+                else if (id == "b") {
+                    heading.style.fontFamily = "Arial";
+                    heading.style.color = "red";
+                }
+                else {
+                    heading.style.fontFamily = "Cursive";
+                    heading.style.color = "Olive";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="h"> Change the Heading</h1>
+
+        <h3 id="a" onclick="change(this.id)"> a. Practice Problem</h3>
+        <h3 id="b" onclick="change(this.id)"> b. Boring Stuff</h3>
+        <h3 id="c" onclick="change(this.id)"> c. Don't know what I am doing</h3>
+
+        <p> WHen the user clicks on any one of the choices above, please change the title to the statement corresponding to that
+            choice. For choice (a) set the font color to navy and the font to Lucida Handwriting. For (b), red and Arial
+            and for (c) Olive and Cursive.
+        </p>
+
+
+
+    </body>
+
+</html>

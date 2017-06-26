@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - </title>
+        <script>
+            function ask() {
+                /*var today = prompt("What day is it today?", "");
+                document.getElementById("userInput").innerHTML = today;
+                var r = document.getElementById("result");
+                if (today == "Monday" || today == "monday") {
+                    r.innerHTML = "Correct!";
+                }*/
+
+                var x = prompt("What is your gender?", "");
+                var i = document.getElementById("image1");
+                if (x.toLowerCase() == "male" || x.toLowerCase() == "man") {
+                    alert("Hello, sir!");
+                    i.src = "images/man.png";
+                }
+                else if (x.toLowerCase() == "female") {
+                    alert("Hello, madam!");
+                    i.src = "images/tiger1.jpg";
+                }
+                else {
+                    alert("Hello, robot!");
+                }
+
+                alert("How are you today?");
+            }
+        </script>
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <h1>Conditional Statements demo</h1>
+
+        <button onclick="ask()">Click me!</button>
+        <p>
+            Input: <span id="userInput"></span>
+        </p>
+        <p>
+            Result: <span id="result"></span>
+
+            <img id="image1" src="">
+        </p>
+
+    </body>
+
+</html>

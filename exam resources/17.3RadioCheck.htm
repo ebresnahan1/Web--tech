@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - Array Demo</title>
+        <script>
+            function processInput() {
+                var myForm = document.getElementById("form1");
+                var userChoice;
+                /*if (myForm.colors[0].checked) {
+                    userChoice = myForm.colors[0].value;
+                }
+                else if (myForm.colors[1].checked) {
+                    userChoice = myForm.colors[1].value;
+                }
+                else if (myForm.colors[2].checked) {
+                    userChoice = myForm.colors[2].value;
+                }
+                else {
+                    userChoice = myForm.colors[3].value;
+                }*/
+
+                var i;
+                for (i = 0; i < myForm.colors.length; i++) {
+                    if (myForm.colors[i].checked) {
+                        userChoice = myForm.colors[i].value;
+                    }
+                }
+
+                document.getElementById("choice").innerHTML = userChoice;
+
+                var x;
+                var sum = 0;
+                var text="";
+                for (x = 1; x <= 10; x++) {
+                    sum = sum + x;
+                    for (var i = 0; i < x; i++) {
+                        text = text + "*"
+                    }
+                    text = text + "<br>";
+
+                }
+                document.getElementById("result").innerHTML = sum + "<br>" + text;
+
+                return false;
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <h1>Array Demo</h1>
+        <form id="form1" action="" method="post">
+            Red: <input type="radio" name="colors" value="red"><br> Blue: <input type="radio" name="colors" value="blue">            <br>Yellow:
+            <input type="radio" name="colors" value="yellow"> <br>Green: <input type="radio" name="colors" value="green"><br>            Brown: <input type="radio" name="colors" value="brown"><br> Black: <input type="radio" name="colors" value="black"><br>
+
+            <button onclick="return processInput()">Click me!</button>
+
+        </form>
+
+        <p> You have chosen <span id="choice"></span></p>
+        <p> Final result: <span id="result"></span></p>
+
+    </body>
+
+</html>
